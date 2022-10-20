@@ -1,7 +1,3 @@
-# router_nat
-En este proyecto crearemos un escenario con dos maquinas, las cueles una actuará como cliente y otra como router.
-Las dos maquinas serán creadas con un fichero vagrantfile y configuradas con un playbook de ansible, el playbook se ejecutará automaticamente una vez se realice un:
-```
-vagrant up
-```
 # DHCP-Ansible
+
+En esta practica reutilizaremos el ansible de la practica anterior para configurar un nuevo escenario sin utilizar vagrant. También añadiremos un nuevo rol para montar un servidor DHCP que reparta IPs en la red interna.
