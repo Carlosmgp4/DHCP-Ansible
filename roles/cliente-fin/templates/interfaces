@@ -1,0 +1,15 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+allow-hotplug {{interface_nat}}
+iface {{interface_nat}} inet dhcp
+
+auto {{interface_ais}}
+iface {{interface_ais}} inet static
+        address {{address2}}
+        netmask {{mask}}

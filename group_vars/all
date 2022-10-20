@@ -1,0 +1,31 @@
+#config /network/interfaces
+# router
+red_aislada: 10.0.0.0
+interface_nat: enp1s0
+interface_aislada: enp8s0
+address: 10.0.0.2
+mask: 255.255.255.0
+#dhcp
+interface_dhcp: enp7s0
+address_dhcp: 192.168.0.1
+mask_dhcp: 255.255.255.0
+
+
+#cliente
+interface_ais: enp7s0
+address2: 10.0.0.3
+mask2: 255.255.255.0
+network: 10.0.0.0
+broadcast: 10.0.0.255
+gateway: 10.0.0.1
+address3: 192.168.0.2
+
+#config dhcp
+sub: 192.168.0.0
+rango_min: 192.168.0.2
+rango_max: 192.168.0.11
+broadcast: 192.168.0.255
+routers: 192.168.0.1
+dns1: 192.168.202.2
+dns2: 1.1.1.1
+mack: 52:54:00:f8:e4:9b
