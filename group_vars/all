@@ -5,6 +5,7 @@ interface_nat: enp1s0
 interface_aislada: enp8s0
 address: 10.0.0.2
 mask: 255.255.255.0
+inter_dnat: enp1s0
 #dhcp
 interface_dhcp: enp7s0
 address_dhcp: 192.168.0.1

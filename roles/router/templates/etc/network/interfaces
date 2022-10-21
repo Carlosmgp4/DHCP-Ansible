@@ -9,7 +9,7 @@ iface lo inet loopback
 auto {{interface_nat}}
 iface {{interface_nat}} inet dhcp
     post-up iptables -t nat -A POSTROUTING -s {{sub}}/24 -o {{interface_nat}} -j MASQUERADE
-    post-up iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth1 -j DNAT --to {{address3}}
+    post-up iptables -t nat -A PREROUTING -p tcp --dport 80 -i {{inter_dnat}} -j DNAT --to {{address3}}
     #post-up ip route del default dev $IFACE || true
 
 # interface dhcp
